@@ -2,6 +2,10 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
+.body-home {
+    background-image: url('../img/background-home.jpg');
+}
+
 .titulo-descricao {
     color: #FFFFFF;
     text-align: center;
