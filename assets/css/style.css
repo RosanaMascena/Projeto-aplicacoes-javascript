@@ -113,8 +113,8 @@ progress {
     cursor: pointer;
 }
 
-.botao-pause {
-    display: none !important;
+div .botao-pause {
+    display: none;
 }
 
 /* Fim CSS Player de Música */
