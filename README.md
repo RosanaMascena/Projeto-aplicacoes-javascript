@@ -1,5 +1,2 @@
 # Projeto-aplicacoes-javascript
- Projeto com apresentação de aplicações em Javascript.
-    Player de Música
-    Calculadora
-    Controle Financeiro
+ Projeto com apresentação de aplicações em Javascript: player de música, calculadora e controle financeiro.
