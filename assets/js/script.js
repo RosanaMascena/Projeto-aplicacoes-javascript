@@ -20,5 +20,6 @@ function pausarMusica(){
     document.querySelector('.botao-play').style.display = 'block';
 }
 
-
-
+function atualizarBarra(){
+    let barra = document.querySelector('progress');
+}
