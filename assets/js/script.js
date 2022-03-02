@@ -3,7 +3,9 @@ let musica = document.querySelector('audio');
 // Eventos
 document.querySelector('.botao-play').addEventListener('click', tocarMusica);
 
-document.querySelector('.botao-pause').addEventListener('click', pausarMusica)
+document.querySelector('.botao-pause').addEventListener('click', pausarMusica);
+
+musica.addEventListener('timeupdate', atualizarBarra);
 
 // Funcções
 function tocarMusica(){
@@ -22,4 +24,5 @@ function pausarMusica(){
 
 function atualizarBarra(){
     let barra = document.querySelector('progress');
+    barra.style.width = Math.floor((musica.currentTime / musica.duration) * 100) + '%';
 }
