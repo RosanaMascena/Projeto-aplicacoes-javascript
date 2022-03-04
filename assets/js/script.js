@@ -25,4 +25,6 @@ function pausarMusica(){
 function atualizarBarra(){
     let barra = document.querySelector('progress');
     barra.style.width = Math.floor((musica.currentTime / musica.duration) * 100) + '%';
+    let tempoDecorrido = document.querySelector('.inicio');
+    tempoDecorrido.textContent = Math.floor(musica.currentTime);
 }
