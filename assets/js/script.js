@@ -28,7 +28,3 @@ function atualizarBarra(){
     let tempoDecorrido = document.querySelector('.inicio');
     tempoDecorrido.textContent = Math.floor(musica.currentTime);
 }
-
-function segundosParaMinutos(segundos){
-    let campoMinutos = 
-}
