@@ -1,3 +1,5 @@
+//Início - Player de Música
+
 let musica = document.querySelector('audio');
 
 let duracaoMusica = document.querySelector('.fim');
@@ -42,4 +44,6 @@ function segundosParaMinutos(segundos){
 
     return campoMinutos+ ':' +campoSegundos;
 }
+
+//Fim - Player de Música
 
