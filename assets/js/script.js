@@ -1,6 +1,6 @@
 //Início - Player de Música
 let musicas = [
-    
+    {titulo:'This Little Light of Mine', artista:'Es Jammy Jams', src:'..\music\Everything Has a Beginning - Joel Cummins.mp3', img:'..\img\jazz-blues.jpg'},
 ]
 
 let musica = document.querySelector('audio');
