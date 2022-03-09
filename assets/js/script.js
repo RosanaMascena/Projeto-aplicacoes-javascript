@@ -1,7 +1,9 @@
 //Início - Player de Música
 let musicas = [
-    {titulo:'This Little Light of Mine', artista:'Es Jammy Jams', src:'..\music\Everything Has a Beginning - Joel Cummins.mp3', img:'..\img\jazz-blues.jpg'},
-]
+    {titulo:'This Little Light of Mine', artista:'Es Jammy Jams', src:'..\This Little Light of Mine - Es Jammy Jams.mp3', img:'..\img\jazz-blues.jpg'},
+    {titulo:'Everything Has a Beginning', artista:'Joel Cummins', src:'..\music\Everything Has a Beginning - Joel Cummins.mp3', img:'..\img\cinema.jpg'},
+    {titulo:'Communicator', artista:'Reed Mathis', src:'..\music\Communicator - Reed Mathis.mp3', img:'..\img\country.jpg'},
+];
 
 let musica = document.querySelector('audio');
 
