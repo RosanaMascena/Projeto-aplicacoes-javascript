@@ -1,43 +1,39 @@
 //Início - Player de Música
 let musicas = [
-    {titulo:'Jazz Blues', artista:'Es Jammy Jams', src:'..\This Little Light of Mine - Es Jammy Jams.mp3', img:'..\img\jazz-blues.jpg'},
-    {titulo:'Cinema', artista:'Joel Cummins', src:'..\music\Everything Has a Beginning - Joel Cummins.mp3', img:'..\img\cinema.jpg'},
-    {titulo:'Country', artista:'Reed Mathis', src:'..\music\Communicator - Reed Mathis.mp3', img:'..\img\country.jpg'},
+    {titulo:'This Little Light of Mine', artista:'Es Jammy Jams', src:'..\music\This Little Light of Mine - Es Jammy Jams.mp3', img:'..\img\jazz-blues.jpg'},
+    {titulo:'Everything Has a Beginning', artista:'Joel Cummins', src:'..\music\Everything Has a Beginning - Joel Cummins.mp3', img:'..\img\cinema.jpg'},
+    {titulo:'Communicator', artista:'Reed Mathis', src:'..\music\Communicator - Reed Mathis.mp3', img:'..\img\country.jpg'},
 ];
 
-let musica = document.querySelector('audio');
+let musica = document.querySelector('.audio-player');
 let indexMusica = 0;
-
-let duracaoMusica = document.querySelector('.fim');
-let imagem = document.querySelector('img');
-let nomeMusica = document.querySelector('.descricao h2');
-let nomeArtista = document.querySelector('.descricao p');
-
 renderizarmusica(indexMusica);
 
-// Eventos
-document.querySelector('.botao-play').addEventListener('click', tocarMusica);
+let duracaoMusica = document.querySelector('.fim-player');
+let imagem = document.querySelector('.img-player');
+let nomeMusica = document.querySelector('.descricao-player h2');
+let nomeArtista = document.querySelector('.descricao-player i');
 
-document.querySelector('.botao-pause').addEventListener('click', pausarMusica);
+// Eventos
+document.querySelector('.botao-play-player').addEventListener('click', tocarMusica);
+
+document.querySelector('div .botao-pause-player').addEventListener('click', pausarMusica);
 
 musica.addEventListener('timeupdate', atualizarBarra);
 
-document.querySelector('.anterior').addEventListener('click', () => {
+document.querySelector('.anterior-player').addEventListener('click', () => {
     indexMusica--;
-    if (indexMusica < 0) {
-        indexMusica = 2;
-    }
-    renderizarmusica(indexMusica);
+    renderizarMusica(indexMusica);
 });
 
-document.querySelector('.proxima').addEventListener('click', () => {
+document.querySelector('.proxima-player').addEventListener('click', () => {
     indexMusica++;
-    renderizarmusica(indexMusica);
+    renderizarMusica(indexMusica);
 });
 
 // Funcções
-function renderizarmusica(index){
-    musica.setAttribute('src', musicas[index.src]);
+function renderizarMusica(index){
+    musica.setAttribute('src', musicas[index].src);
     musica.addEventListener('loadeddata', () => {
         nomeMusica.textContent = musicas[index].titulo;
         nomeArtista.textContent = musicas[index].artista;
@@ -48,23 +44,21 @@ function renderizarmusica(index){
 
 function tocarMusica(){
     musica.play();
-    document.querySelector('div .botao-pause').style.display = 'block';
-    musica.play();
-    document.querySelector('.botao-play').style.display = 'none';
+    document.querySelector('div .botao-pause-player').style.display = 'block';
+    document.querySelector('.botao-play-player').style.display = 'none';
 }
 
 function pausarMusica(){
     musica.pause();
-    document.querySelector('div .botao-pause').style.display = 'none';
-    musica.pause();
-    document.querySelector('.botao-play').style.display = 'block';
+    document.querySelector('div .botao-pause-player').style.display = 'none';
+    document.querySelector('.botao-play-player').style.display = 'block';
 }
 
 function atualizarBarra(){
     let barra = document.querySelector('progress');
     barra.style.width = Math.floor((musica.currentTime / musica.duration) * 100) + '%';
-    let tempoDecorrido = document.querySelector('.inicio');
-    tempoDecorrido.textContent = segundosParaMinutos(Math.floor(musica.currentTime));
+    let tempoDecorrido = document.querySelector('.inicio-player');
+    tempoDecorrido.textContent = segundosParaMinutos(Math.floor(musica.currentTime)); 
 }
 
 function segundosParaMinutos(segundos){
@@ -76,6 +70,3 @@ function segundosParaMinutos(segundos){
 
     return campoMinutos+ ':' +campoSegundos;
 }
-
-//Fim - Player de Música
-
