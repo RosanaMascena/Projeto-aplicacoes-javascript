@@ -35,34 +35,34 @@ body {
     color: #DDDDDD;
 }
 
-.img-jazz {
+.img-player {
     width: 300px;
     height: 300px;
     filter: drop-shadow(2px 2px 6px #FFFFFF);
 }
 
-.descricao, .duracao {
+.descricao-player, .duracao-player {
     width: 300px;
 }
 
-.descricao {
+.descricao-player {
     margin-top: 15px;
 }
 
-.descricao h2, .descricao p {
+.descricao-player h2, .descricao-player i {
     line-height: 2;
 }
 
-.descricao h2 {
+.descricao-player h2 {
     font-size: 18px;
     font-weight: 600;  
 }
 
-.descricao p {
+.descricao-player i {
     font-size: 14px;
 }
 
-.barra {
+.barra-player {
     width: 300px;
     height: 6px;
     border: 2px solid #EEEEEE;
@@ -80,7 +80,7 @@ progress {
     background-color: #333333;
 }
 
-.ponto {
+.ponto-player {
     width: 20px;
     height: 20px;
     background-color: #EEEEEE;
@@ -89,13 +89,13 @@ progress {
     cursor: pointer;
 }
 
-.tempo {
+.tempo-player {
     width: 300px;
     display: flex;
     justify-content: space-between;
 }
 
-.player {
+.player-musica {
     width: 300px;
     display: flex;
     justify-content: space-around;
@@ -103,9 +103,13 @@ progress {
     margin-top: 25px;
 }
 
-.botao-play, .botao-pause {
+.botao-play-player, .botao-pause-player {
     font-size: 50px;
     cursor: pointer;
+}
+
+div .botao-pause-player {
+    display: none;
 }
 
 .setas {
@@ -113,13 +117,4 @@ progress {
     cursor: pointer;
 }
 
-div .botao-pause {
-    display: none;
-}
-
 /* Fim CSS Player de Música */
-
-
-
-@media screen and (max-width: 769px) {
-}
