@@ -85,7 +85,7 @@ progress {
     cursor: pointer;
 }
 
-.botao-pause {
+div .botao-pause {
     display: none;
 }
 
