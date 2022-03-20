@@ -4,7 +4,7 @@ let musicas = [
     {titulo:'Communicator', artista:'Reed Mathis', src:'..\music\Communicator - Reed Mathis.mp3', img:'..\img\country.jpg'},
 ];
 
-let musica = document.querySelector('audio');
+let musica = document.querySelector('');
 let indexMusica = 0;
 renderizarMusica(indexMusica);
 
