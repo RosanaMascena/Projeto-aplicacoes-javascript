@@ -8,10 +8,10 @@ let musica = document.querySelector('');
 let indexMusica = 0;
 renderizarMusica(indexMusica);
 
-let duracaoMusica = document.querySelector('.fim');
-let imagem = document.querySelector('img');
-let nomeMusica = document.querySelector('.descricao h2');
-let nomeArtista = document.querySelector('.descricao i');
+let duracaoMusica = document.querySelector('');
+let imagem = document.querySelector('');
+let nomeMusica = document.querySelector('');
+let nomeArtista = document.querySelector('');
 
 // Eventos
 document.querySelector('.botao-play').addEventListener('click', tocarMusica);
